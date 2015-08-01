@@ -1,11 +1,14 @@
 package com.finxster.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Representa um endereço.
  *
  * @author finx
  * @created 01/08/2015
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Endereco {
 
     private Long id;
