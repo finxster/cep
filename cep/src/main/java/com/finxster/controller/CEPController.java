@@ -6,12 +6,24 @@ import org.springframework.stereotype.Controller;
 import com.finxster.dao.EnderecoDAO;
 import com.finxster.domain.Endereco;
 
+/**
+ * Controller responsável por executar as regras de negócio para quando o usuário estiver tentando buscar um endereço através de um cep.
+ *
+ * @author finx
+ * @created 01/08/2015
+ */
 @Controller
 public class CEPController {
 
     @Autowired
     private EnderecoDAO enderecoDAO;
 
+    /**
+     * Retorna um endereço a partir de um cp.
+     *
+     * @param cep o cep utilizado na busca.
+     * @return json com as informações do endereço. Para mais detalhes, ver {@link Endereco#toJson()}.
+     */
     public String getEndereco(String cep) {
         Endereco endereco = this.enderecoDAO.findByCep(cep);
         // encontrou o endereço exato

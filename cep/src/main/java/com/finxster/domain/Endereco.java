@@ -1,5 +1,11 @@
 package com.finxster.domain;
 
+/**
+ * Representa um endereço.
+ *
+ * @author finx
+ * @created 01/08/2015
+ */
 public class Endereco {
 
     private Long id;
@@ -14,9 +20,22 @@ public class Endereco {
 
     private String cep;
 
+    /**
+     * Construtor vazio.
+     */
     public Endereco() {
     }
 
+    /**
+     * Construtor. Recebe os atributos do endereço.
+     *
+     * @param id o id do endereço.
+     * @param rua a rua do endereço.
+     * @param bairro o bairro do endereço.
+     * @param cidade a cidade do endereço.
+     * @param estado o estado do endereço.
+     * @param cep o cep do endereço.
+     */
     public Endereco(Long id, String rua, String bairro, String cidade, String estado, String cep) {
         this.id = id;
         this.rua = rua;
@@ -110,6 +129,11 @@ public class Endereco {
         this.cep = cep;
     }
 
+    /**
+     * Retorna o endereço em formato JSON.
+     *
+     * @return o endereço em formato JSON.
+     */
     public String toJson() {
         StringBuilder json = new StringBuilder();
         json.append("{ ");

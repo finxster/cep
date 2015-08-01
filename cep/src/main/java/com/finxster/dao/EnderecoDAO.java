@@ -9,6 +9,12 @@ import org.springframework.stereotype.Repository;
 
 import com.finxster.domain.Endereco;
 
+/**
+ * DAO para Endereço.
+ *
+ * @author finx
+ * @created 01/08/2015
+ */
 @Repository
 public class EnderecoDAO {
 
