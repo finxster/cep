@@ -15,6 +15,8 @@ public class Endereco {
 
     private String rua;
 
+    private String numero;
+
     private String bairro;
 
     private String cidade;
@@ -22,6 +24,8 @@ public class Endereco {
     private String estado;
 
     private String cep;
+
+    private String complemento;
 
     /**
      * Construtor vazio.
@@ -74,6 +78,20 @@ public class Endereco {
      */
     public void setRua(String rua) {
         this.rua = rua;
+    }
+
+    /**
+     * @return the numero
+     */
+    public String getNumero() {
+        return this.numero;
+    }
+
+    /**
+     * @param numero the numero to set
+     */
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     /**
@@ -130,6 +148,20 @@ public class Endereco {
      */
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    /**
+     * @return the complemento
+     */
+    public String getComplemento() {
+        return this.complemento;
+    }
+
+    /**
+     * @param complemento the complemento to set
+     */
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
 
     /**

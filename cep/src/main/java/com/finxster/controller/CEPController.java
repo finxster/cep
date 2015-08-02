@@ -59,4 +59,20 @@ public class CEPController {
         this.enderecoDAO = enderecoDAO;
     }
 
+    public void incluirEndereco(Endereco endereco) {
+        this.enderecoDAO.incluirEndereco(endereco);
+    }
+
+    public void atualizarEndereco(Endereco endereco) {
+        this.enderecoDAO.atualizarEndereco(endereco);
+    }
+
+    public void excluirEndereco(Endereco endereco) {
+        this.enderecoDAO.excluirEndereco(endereco);
+    }
+
+    public Endereco consultarEndereco(Endereco endereco) {
+        return this.enderecoDAO.findById(endereco.getId());
+    }
+
 }

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.finxster.domain.CEP;
+import com.finxster.domain.Endereco;
 import com.finxster.util.CEPUtils;
 
 /**
@@ -35,4 +36,26 @@ public class CEPRestController {
         return this.cepController.getEndereco(cep.getCep());
     }
 
+    @RequestMapping(value = "/incluirEndereco", method = RequestMethod.POST)
+    public String incluirEndereco(@RequestBody Endereco endereco) {
+        this.cepController.incluirEndereco(endereco);
+        return "Endereço cadastrado com sucesso.";
+    }
+
+    @RequestMapping(value = "/atualizarEndereco", method = RequestMethod.POST)
+    public String atualizarEndereco(@RequestBody Endereco endereco) {
+        this.cepController.atualizarEndereco(endereco);
+        return "Endereço atualizado com sucesso.";
+    }
+
+    @RequestMapping(value = "/excluirEndereco", method = RequestMethod.POST)
+    public String excluirEndereco(@RequestBody Endereco endereco) {
+        this.cepController.excluirEndereco(endereco);
+        return "Endereço excluído com sucesso.";
+    }
+
+    @RequestMapping(value = "/consultarEndereco", method = RequestMethod.POST)
+    public Endereco consultarEndereco(@RequestBody Endereco endereco) {
+        return this.cepController.consultarEndereco(endereco);
+    }
 }
